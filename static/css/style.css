@@ -1,0 +1,7 @@
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #dbeedc, #c2d4c2, #b8cfc9); /* menta, bosque, agua */
+    color: #2f3e2e; /* Verde oscuro para texto */
+}

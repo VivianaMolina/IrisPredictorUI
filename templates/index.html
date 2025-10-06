@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Viviana Molina">
+    <meta name="description" content="Iris Species Predictor">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Iris Species Predictor</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 40px; }
+        input { margin: 5px; padding: 8px; width: 200px; }
+        button { padding: 10px 20px; margin-top: 10px; }
+        .result { margin-top: 30px; }
+        img { max-width: 300px; border-radius: 8px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Predict Iris Species</h1>
+    <form method="POST">
+        <input type="text" name="sepal_length" placeholder="Sepal Length"><br>
+        <input type="text" name="sepal_width" placeholder="Sepal Width"><br>
+        <input type="text" name="petal_length" placeholder="Petal Length"><br>
+        <input type="text" name="petal_width" placeholder="Petal Width"><br>
+        <button type="submit">Predict Species</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+        <h2>Prediction: {{ prediction }}</h2>
+        <p><em>Predicción: {{ prediction }}</em></p>
+        {% if image_file %}
+        <img src="{{ url_for('static', filename='img/' + image_file) }}" alt="{{ prediction }}">
+        {% endif %}
+    </div>
+    {% endif %}
+</body>
+</html>
