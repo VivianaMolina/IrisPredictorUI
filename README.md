@@ -16,6 +16,7 @@ Visualization: Displays the image of the predicted Iris species.
 ## 📁 Project Structure
 The project has the following file organization:
 
+```
 .
 ├── models/
 │   └── model_iris.pkl    # Trained and saved model
@@ -33,6 +34,7 @@ The project has the following file organization:
 ├── README.md
 └── requirements.txt      # List of Python dependencies
 
+```
 
 Important Note: For the application to work correctly, you must include the three Iris species images (Setosa.png, Versicolor.png, Virginica.png) inside the static/ folder.
 
