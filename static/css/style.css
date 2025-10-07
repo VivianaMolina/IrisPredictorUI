@@ -2,6 +2,35 @@ body {
     margin: 0;
     border: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #dbeedc, #c2d4c2, #b8cfc9); /* menta, bosque, agua */
-    color: #2f3e2e; /* Verde oscuro para texto */
+    background: #FFF2CC;
+    font-family: "Karla", sans-serif;
+    text-align: center; 
+    margin-top: 40px;
+}
+
+input { 
+    margin: 5px; 
+    padding: 8px; 
+    width: 200px; 
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+button { 
+    padding: 10px 20px; 
+    margin-top: 10px; 
+    font-size: 14px;
+    padding-top: 10px;
+    background-color: #ffd700;
+    font-weight: bold;
+}
+
+.result { 
+    margin-top: 30px; 
+}
+
+img { 
+    max-width: 300px; 
+    border-radius: 8px; 
+    margin-top: 20px; 
 }

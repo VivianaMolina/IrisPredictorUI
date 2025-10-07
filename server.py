@@ -1,9 +1,18 @@
 from flask import Flask, render_template, request, redirect 
 import joblib
 import numpy as np
+import os
 
 app = Flask(__name__, static_folder='static') 
 model, target_names = joblib.load('models/model_iris.pkl')
+
+model_path = os.path.join('models', 'model_iris.pkl')
+
+try:
+    model, target_names = joblib.load(model_path)
+except FileNotFoundError:
+    print(f"Model file not found at {model_path}. Please train and save the model first.")
+    model, target_names = None, None  # Optional: fallback values or redirect logic
 
 # Map species name to image filename
 species_images = {
