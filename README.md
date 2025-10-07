@@ -17,22 +17,28 @@ Visualization: Displays the image of the predicted Iris species.
 The project has the following file organization:
 
 ```
-.
+├── .github/
+│   └── workflows/
+│       └── deploy.yml            # GitHub Actions workflow for deployment.
+├── Documentation/
+│   ├── Docker_Setup_Evidence_IrisApp.docx # Documentation and evidence for Docker setup.
+│   └── GitHub_Workflow_and_Pages_Configuration.docx # Configuration details for GitHub Pages and Workflows.
 ├── models/
-│   └── model_iris.pkl    # Trained and saved model
+│   └── model_iris.pkl            # Pre-trained machine learning model (pickle file).
 ├── static/
 │   ├── css/
-│   │   └── style.css     # Custom CSS styles
-│   ├── img/
-│   │   ├── Setosa.png    # Image for Setosa
-│   │   ├── Versicolor.png# Image for Versicolor
-│   │   └── Virginica.png # Image for Virginica
+│   │   └── style.css             # CSS file for application styling.
+│   └── img/
+│       ├── Setosa.png            # Image for the Iris Setosa class.
+│       ├── Versicolor.png        # Image for the Iris Versicolor class.
+│       └── Virginica.png         # Image for the Iris Virginica class.
 ├── templates/
-│   └── index.html        # HTML template for the interface
-├── iris.py               # Script to train the model (Step 1)
-├── server.py             # Main Flask application (Step 2)
-├── README.md
-└── requirements.txt      # List of Python dependencies
+│   └── index.html                # Main HTML template for the user interface.
+├── Dockerfile                    # Instructions for building the application's Docker image.
+├── iris.py                       # Main script with model logic and prediction functions.
+├── README.md                     # This documentation file.
+├── requirements.txt              # Python dependencies required for the application.
+└── server.py                     # Script that configures and runs the web server (e.g., Flask).
 
 ```
 
@@ -70,6 +76,10 @@ python server.py
 The server will start in debug mode. Open your web browser and navigate to the following address:
 
 https://www.google.com/search?q=http://127.0.0.1:5000/ or http://localhost:5000/
+
+GitHub Actions: https://github.com/VivianaMolina/IrisPredictorUI/actions
+
+GitHub Pages: https://vivianamolina.github.io/IrisPredictorUI/
 
 ## 💻 Using the Interface
 Enter Parameters: In the interface, enter the numerical values for the four flower characteristics (sepal and petal length/width, in centimeters).
