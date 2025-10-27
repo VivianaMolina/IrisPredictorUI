@@ -4,7 +4,16 @@ This project implements a simple Machine Learning model for classifying the thre
 
 The user can input the four key flower measurements (sepal and petal length/width), and the application returns the predicted species along with an illustrative image.
 
+The project is built to be deployed as a Web App (App Service) using Docker containers.
+
 ## ✨ Features
+
+Containers: Docker
+
+Deployment: Azure App Service (Web App)
+
+CI/CD: GitHub Actions (see \.github\workflows\deploy.yml)
+
 Classification Model: Uses a RandomForestClassifier from Scikit-learn, trained with the popular load_iris() dataset.
 
 Model Persistence: The trained model is saved as model_iris.pkl using joblib so it can be loaded by the Flask application without retraining.
@@ -12,6 +21,20 @@ Model Persistence: The trained model is saved as model_iris.pkl using joblib so 
 Web Interface: Minimalist and responsive user interface (using CSS) implemented in Flask.
 
 Visualization: Displays the image of the predicted Iris species.
+
+Example input values:
+
+         "sepal_length": 5.1,
+         "sepal_width": 3.5,
+         "petal_length": 1.4,
+         "petal_width": 0.2
+
+## 🌐 Deployment on Azure
+
+The application is deployed and publicly accessible.
+
+Azure Application URL: [https://irispredictorui-hhaygmetebcag2gk.canadacentral-01.azurewebsites.net/]
+
 
 ## 📁 Project Structure
 The project has the following file organization:
